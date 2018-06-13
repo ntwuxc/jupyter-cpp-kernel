@@ -16,7 +16,7 @@ kernel_json = {
         "-f",
         "{connection_file}"
     ],
-    "display_name": "c++-chun",
+    "display_name": "c++",
     "language": "c++"
 }
 
@@ -29,7 +29,7 @@ def install_my_kernel_spec(user=True, prefix=None):
         # TODO: Copy resources once they're specified
 
         print('Installing IPython kernel spec')
-        KernelSpecManager().install_kernel_spec(td, 'c', user=user, replace=True, prefix=prefix)
+        KernelSpecManager().install_kernel_spec(td, 'cpp', user=user, replace=True, prefix=prefix)
 
 
 def _is_root():
@@ -41,7 +41,7 @@ def _is_root():
 
 def main(argv=[]):
     parser = argparse.ArgumentParser(
-        description='Install KernelSpec for C Kernel'
+        description='Install KernelSpec for CPP Kernel'
     )
     prefix_locations = parser.add_mutually_exclusive_group()
 
